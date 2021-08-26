@@ -1,6 +1,6 @@
 import streamlit as st
-import shap
 import pandas as pd
+import numpy
 from sklearn.linear_model import ElasticNet
 import matplotlib.pyplot as plt
 from sklearn.pipeline import Pipeline
@@ -150,23 +150,3 @@ st.write(thc_predict)
 st.write('Fuel Cost prediction')
 st.write(fuel_cost_predict)
 st.write('---')
-# Explaining the model's predictions using SHAP values
-# https://github.com/slundberg/shap
-
-model = RandomForestRegressor(max_features = 'sqrt',max_depth = 7, n_estimators = 58, n_jobs = 1)
-model.fit(X, y)
-
-explainer = shap.TreeExplainer(model)
-shap_values = explainer.shap_values(X)
-
-st.header('Feature Importance')
-plt.title('Feature importance based on SHAP values')
-shap.summary_plot(shap_values, X)
-st.pyplot(bbox_inches='tight')
-st.write('---')
-
-plt.title('Feature importance based on SHAP values (Bar)')
-shap.summary_plot(shap_values, X, plot_type="bar")
-st.pyplot(bbox_inches='tight')
-
-
