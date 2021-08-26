@@ -1,5 +1,4 @@
 import streamlit as st
-import pickle
 import shap
 import pandas as pd
 from sklearn.linear_model import ElasticNet
