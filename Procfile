@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run capstone-car-emissions-fc.py
+web: sh setup.sh && streamlit run Capstone.py
