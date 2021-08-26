@@ -41,7 +41,7 @@ X["manufacturer"] = pd.to_numeric(X["manufacturer"], downcast="float")
 X["transmission"] = pd.to_numeric(X["transmission"], downcast="float")
 X["Petrol"] = pd.to_numeric(X["Petrol"], downcast="float")
 X["Diesel"] = pd.to_numeric(X["Diesel"], downcast="float")
-X["Petrol Hybrid'"] = pd.to_numeric(X["Petrol Hybrid"], downcast="float")
+X["Petrol Hybrid"] = pd.to_numeric(X["Petrol Hybrid"], downcast="float")
 
 st.sidebar.header('Specify Input Parameters')
 def user_input_features():
