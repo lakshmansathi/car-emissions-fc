@@ -34,12 +34,9 @@ st.header('Emissions Car APP')
 st.write(data)
 st.write('---')
 X = data[['manufacturer','transmission','engine_capacity','noise_level','euro_standard_','Petrol','Diesel','Petrol Hybrid']]
-
-# Sidebar
-# Header of Specify Input Parameters
 X["engine_capacity"] = pd.to_numeric(X["engine_capacity"], downcast="float")
 X["noise_level"] = pd.to_numeric(X["noise_level"], downcast="float")
-X["euro_standard_"] = pd.to_numeric(X["euro_standard_"], downcast="float")
+X["euro_standard_"] = pd.to_numeric(X["euro_standard_"], downcast="float")# Sidebar
 st.sidebar.header('Specify Input Parameters')
 def user_input_features():
     Engine_Capacity = st.sidebar.slider('engine Capacity', X.engine_capacity.min(), X.engine_capacity.max(), X.engine_capacity.mean())
