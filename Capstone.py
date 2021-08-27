@@ -48,7 +48,7 @@ st.sidebar.header('Specify Input Parameters')
 def user_input_features():
     Engine_Capacity = float(st.sidebar.slider('engine Capacity', float(X.engine_capacity.min()), float(X.engine_capacity.max()), float(X.engine_capacity.mean())))
     Noise_level = float(st.sidebar.slider('Noise_level', float(X.noise_level.min()), float(X.noise_level.max()), float(X.noise_level.mean()))
-    euro_standard_ = st.sidebar.slider('euro_standard_', float(X.euro_standard_.min()), float(X.euro_standard_.max()), float(X.euro_standard_.mean()))
+    euro_standard_ = float(st.sidebar.slider('euro_standard_', float(X.euro_standard_.min()), float(X.euro_standard_.max()), float(X.euro_standard_.mean()))
     petrol = st.sidebar.selectbox('Petrol', ('Yes','No'))
     Diesel = st.sidebar.selectbox('Diesel',  ('Yes','No'))
     Petrol_Hybrid = st.sidebar.selectbox('Petrol Hybrid',  ('Yes','No'))
