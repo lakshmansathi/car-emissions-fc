@@ -46,9 +46,9 @@ X["Petrol Hybrid"] = pd.to_numeric(X["Petrol Hybrid"], downcast="float")
 # Header of Specify Input Parameters
 st.sidebar.header('Specify Input Parameters')
 def user_input_features():
-    Engine_Capacity = st.sidebar.slider('engine Capacity', X.engine_capacity.min(), X.engine_capacity.max(), X.engine_capacity.mean())
-    Noise_level = st.sidebar.slider('Noise_level', X.noise_level.min(), X.noise_level.max(), X.noise_level.mean())
-    euro_standard_ = st.sidebar.slider('euro_standard_', X.euro_standard_.min(), X.euro_standard_.max(), X.euro_standard_.mean())
+    Engine_Capacity = float(st.sidebar.slider('engine Capacity', X.engine_capacity.min(), X.engine_capacity.max(), X.engine_capacity.mean()))
+    Noise_level = float(st.sidebar.slider('Noise_level', X.noise_level.min(), X.noise_level.max(), X.noise_level.mean()))
+    euro_standard_ = float(st.sidebar.slider('euro_standard_', X.euro_standard_.min(), X.euro_standard_.max(), X.euro_standard_.mean()))
     petrol = st.sidebar.selectbox('Petrol', ('Yes','No'))
     Diesel = st.sidebar.selectbox('Diesel',  ('Yes','No'))
     Petrol_Hybrid = st.sidebar.selectbox('Petrol Hybrid',  ('Yes','No'))
